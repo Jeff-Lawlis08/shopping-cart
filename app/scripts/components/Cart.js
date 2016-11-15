@@ -14,10 +14,14 @@ export default React.createClass({
       this.setState({cartItems: store.cart.toJSON()});
     });
   },
+  componentDidMount(){
+    store.cart.getTotal();
+  },
   render(){
+    console.log(store.cart);
         let allCartItems = this.state.cartItems.items.map((item, i, arr)=>{
           return (
-            <CartItem key={item.name} item={item} index={i}/>
+            <CartItem key={i} item={item} index={i}/>
           )
         });
     return(
