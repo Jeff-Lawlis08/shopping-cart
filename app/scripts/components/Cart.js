@@ -14,9 +14,9 @@ export default React.createClass({
       this.setState({cartItems: store.cart.toJSON()});
     });
   },
-  componentDidMount(){
-    store.cart.getTotal();
-  },
+  // componentDidMount(){
+  //   store.cart.getTotal();
+  // },
   render(){
     console.log(store.cart);
         let allCartItems = this.state.cartItems.items.map((item, i, arr)=>{
@@ -30,7 +30,7 @@ export default React.createClass({
         <ul className="cart">
           {allCartItems}
         </ul>
-        <span>Total: ${store.cart.getTotal()}</span>
+        <span>Total: ${store.cart.get('total')}</span>
       </div>
     );
   }
