@@ -18,11 +18,10 @@ export default React.createClass({
   //   store.cart.getTotal();
   // },
   render(){
-    console.log(store.cart);
         let allCartItems = this.state.cartItems.items.map((item, i, arr)=>{
           return (
             <CartItem key={i} item={item} index={i}/>
-          )
+          );
         });
     return(
       <div>
