@@ -7,7 +7,7 @@ export default React.createClass({
   render(){
     let allAvailableItems = store.merch.map((item, i, arr) => {
       return (
-        <Item key={item.name} item={item}/>
+        <Item key={i} item={item}/>
     );
     });
     return(

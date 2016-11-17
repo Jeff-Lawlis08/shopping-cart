@@ -7,7 +7,7 @@ import sinon from 'sinon';
 describe('Item component', () => {
   let item;
   beforeEach(() => {
-    let item = shallow(<Item key={item.name} item={'stuff'} />);
+    item = shallow(<Item key={1} item={'stuff'} />);
   });
   it('should be an li element', () => {
       expect(item.is('li')).to.equal(true);
